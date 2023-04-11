@@ -14,7 +14,10 @@
    
 
     <div id="app">
+        <!-- genera una lista non ordinata se la lunghezza dell'array è 10 -->
+        <!-- prende i singoli elemente dell'array ciclandoci dentro -->
         <ul v-for="email in list_emails" v-if="list_emails.length == 10">
+            <!-- genera un li contenente l'elemento dell'array ottenuto dal ciclo -->
             <li>{{email}}</li>
         </ul>
     </div>

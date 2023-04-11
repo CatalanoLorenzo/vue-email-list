@@ -15,16 +15,21 @@ const app = createApp({
 
     },
     mounted() {
+        //cicla per dieci volte 
         for (let i = 0; i < 10; i++) {
+            //chiama API
             axios
+            //richiesta all'API tramite URL
                 .get(this.url)
+                //risposta dell'API
                 .then(response => {
                     //console.log(response);
+                    //prende il valore della risposta e lo inserisce nell'array vuoto
                     this.list_emails.push(response.data.response)
                     //console.log(response.data.response);
                 })
         }
-        console.log(this.list_emails);
+        //console.log(this.list_emails);
 
     },
 
