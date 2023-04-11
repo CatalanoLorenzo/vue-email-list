@@ -15,14 +15,17 @@ const app = createApp({
 
     },
     mounted() {
-        axios
-        .get(this.url)
-        .then(response => {
-            console.log(response);
-            this.list_email.push(response.data.response)
-            console.log(response.data.response);
-            console.log(this.list_email.push);
-        })
+        for (let i = 0; i < 10; i++) {
+            axios
+                .get(this.url)
+                .then(response => {
+                    //console.log(response);
+                    this.list_email.push(response.data.response)
+                    //console.log(response.data.response);
+                })
+        }
+        console.log(this.list_email);
+
     },
 
 })
