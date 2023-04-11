@@ -14,6 +14,13 @@
    
 
     <div id="app">
+        <div class="loader" v-show="!(list_emails.length == 10)">
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+          </div>
         <!-- genera una lista non ordinata se la lunghezza dell'array è 10 -->
         <!-- prende i singoli elemente dell'array ciclandoci dentro -->
         <ul v-for="email in list_emails" v-if="list_emails.length == 10">
