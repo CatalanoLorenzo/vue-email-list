@@ -8,7 +8,7 @@ const app = createApp({
     data() {
         return {
             url: "https://flynn.boolean.careers/exercises/api/random/mail",
-            list_email: [],
+            list_emails: [],
         }
     },
     methods: {
@@ -20,11 +20,11 @@ const app = createApp({
                 .get(this.url)
                 .then(response => {
                     //console.log(response);
-                    this.list_email.push(response.data.response)
+                    this.list_emails.push(response.data.response)
                     //console.log(response.data.response);
                 })
         }
-        console.log(this.list_email);
+        console.log(this.list_emails);
 
     },
 
